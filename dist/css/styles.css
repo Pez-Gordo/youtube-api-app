@@ -49,9 +49,25 @@ article {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 12px;
+  border: 2px solid white;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+article:hover {
+  border: 2px solid #ff9999;
 }
 
 .thumb {
   height: 70px;
+  border-radius: 4px;
+}
+
+.details {
+  padding: 8px 22px;
 }
 /*# sourceMappingURL=styles.css.map */
