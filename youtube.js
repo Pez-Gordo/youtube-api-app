@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    var key = "AIzaSyAQI8vNBVkmV1wvImePx2BXK2_bI3HJ1UU"
+    var key = "Your API Key"
     var playlistId = "PLdYvk1h7b9k_eoLEg4jK4NG00jmZSG-py"
     var url = "https://www.googleapis.com/youtube/v3/playlistItems"
 
