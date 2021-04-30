@@ -14,7 +14,7 @@ $(document).ready(function() {
     loadVids()
     function loadVids() {
         $.getJSON(url, options, function(data) {
-            console.log(data)
+            //console.log(data)
             var id = data.items[0].snippet.resourceId.videoId
             mainVid(id)
             resultsLoop(data)
@@ -36,10 +36,11 @@ $(document).ready(function() {
             var thumb = item.snippet.thumbnails.medium.url
             var title = item.snippet.title
             var description = item.snippet.description.substring(0, 100)
+            var vid = item.snippet.resourceId.videoId
 
             $("main").append(`
         
-                <article>
+                <article class="item" data-key="${vid}">
 
                     <img src="${thumb}" alt="" class="thumb">
 
@@ -53,12 +54,12 @@ $(document).ready(function() {
             `)
 
         })
-
-        
-
-        
-
     }
+
+    $("main").on("click", "article", function() {
+        var id = $(this).attr('data-key')
+        mainVid(id)
+    })
 
 })
 
